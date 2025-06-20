@@ -77,24 +77,24 @@ let package = Package(
         .executableTarget(
             name: "ffplay",
             dependencies: [
-                "fftools",
+                "fftoolskit",
                 "SDL2",
             ]
         ),
         .executableTarget(
             name: "ffprobe",
             dependencies: [
-                "fftools",
+                "fftoolskit",
             ]
         ),
         .executableTarget(
             name: "ffmpeg",
             dependencies: [
-                "fftools",
+                "fftoolskit",
             ]
         ),
         .target(
-            name: "fftools",
+            name: "fftoolskit",
             dependencies: [
                 "FFmpegKit",
             ]

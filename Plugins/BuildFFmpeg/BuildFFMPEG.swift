@@ -91,7 +91,7 @@ class BuildFFMPEG: BaseBuild {
             try str.write(toFile: internalPath.path, atomically: true, encoding: .utf8)
         }
         if platform == .macos, arch.executable {
-            let fftoolsFile = URL.currentDirectory + "../Sources/fftools"
+            let fftoolsFile = URL.currentDirectory + "../Sources/fftoolskit"
             try? FileManager.default.removeItem(at: fftoolsFile)
             if !FileManager.default.fileExists(atPath: (fftoolsFile + "include/compat").path) {
                 try FileManager.default.createDirectory(at: fftoolsFile + "include/compat", withIntermediateDirectories: true)
